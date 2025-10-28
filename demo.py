@@ -34,7 +34,7 @@ def load_videos_from_folder(folder_path, max_frames=121):
     """Load all videos from folder and return as batch tensor [B, T, C, H, W]"""
     videos = []
     video_files = sorted([f for f in os.listdir(folder_path) if f.endswith('.mp4')])
-    
+    print(video_files)
     for video_file in video_files:
         video_path = os.path.join(folder_path, video_file)
         video_tensor = load_video(video_path, max_frames)
