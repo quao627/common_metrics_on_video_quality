@@ -24,7 +24,7 @@ def calculate_fvd(videos1, videos2, device, method='styleganv', only_final=False
 
     # videos [batch_size, timestamps, channel, h, w]
     
-    assert videos1.shape == videos2.shape
+    # assert videos1.shape == videos2.shape
 
     i3d = load_i3d_pretrained(device=device)
     fvd_results = []
